@@ -61,13 +61,7 @@ public class AlienAndPwd {
 
 		StringBuilder strbuilder = new StringBuilder();
 		strbuilder.append(passwordHint);
-		// strbuilder.setLength(passwordHint.length());
 
-		System.out.println("Results : >>>> of >>>" + strbuilder.toString());
-		System.out.println("Results : >>>> of >>>" + strbuilder);
-		System.out.println("Results : >>>> of >>>" + strbuilder.length());
-		System.out.println("Results : >>>> of >>>"
-				+ strbuilder.substring(0, strbuilder.length() / 2));
 
 		System.out.println("Results : >>>>"
 				+ getRefinedStringBuilder(strbuilder).toString().length());
@@ -92,7 +86,6 @@ public class AlienAndPwd {
 				StringBuilder firstHalfStrBuilder = new StringBuilder(firstHalf);
 				StringBuilder secondHalfStrBuilder = new StringBuilder(secondHalf);
 				int firstHalfEndPoint = firstHalfStrBuilder.length() - 1;
-				System.out.println("Length>>>"+firstHalfEndPoint);
 				while (firstHalfEndPoint != -1 && firstHalfStrBuilder
 						.charAt(firstHalfEndPoint) == secondHalfStrBuilder
 						.charAt(0)) {
@@ -102,7 +95,7 @@ public class AlienAndPwd {
 					firstHalfStrBuilder.deleteCharAt(firstHalfEndPoint);
 					firstHalfEndPoint --;
 					System.out.println("So deleted  last char and results >>" + firstHalfStrBuilder + " >> " + secondHalfStrBuilder);
-					System.out.println("Length2>>>"+firstHalfEndPoint);
+					System.out.println("firstHalfEndPoint>>>"+firstHalfEndPoint);
 
 				}
 				return getRefinedStringBuilder(firstHalfStrBuilder).append(
