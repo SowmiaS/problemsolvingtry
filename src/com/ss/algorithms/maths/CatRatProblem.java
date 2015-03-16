@@ -1,6 +1,6 @@
-package com.ss.algorithms;
+package com.ss.algorithms.maths;
 
-public class Main {
+public class CatRatProblem {
 
 	public static void main(String[] args ){
 		int R = 1;
@@ -27,8 +27,12 @@ public class Main {
 	 * Java is statically typed , need to be declared before used.
 	 */
 	public static double getTime(int R, int T, int Vrat, int Vcat){
+		double lengthOfCircle =  2 * 3.14 * R;
+		
 		if(Vcat <= Vrat){
-			return -1.0;
+			double timeToFinishOneCircleRat = lengthOfCircle / Vrat;
+			if(T == 0 || T == ((int)timeToFinishOneCircleRat) ) return 0.0;
+			else return -1.0;
 		}else{
 			return findTimeToCatchRat(T, Vrat, Vcat);
 		}
